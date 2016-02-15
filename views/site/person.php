@@ -23,6 +23,6 @@ $this->params['breadcrumbs'][] = ['label' => "$a $b"];
         <?= $person->zip ?>
     </div>
     <div class="form-group">
-        <a href="/persons/web?r=site/update&id=<?= $person->id ?>">Update</a> | <a href="/persons/web?r=site/delete&id=<?= $person->id ?>">Delete</a>
+        <a href="/persons/web/update/<?= $person->id ?>">Update</a> | <a href="/persons/web/delete/<?= $person->id ?>">Delete</a>
     </div>
 </div>

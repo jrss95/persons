@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 $a = ucwords($person->firstname);
 $b = ucwords($person->lastname);
 $this->title = "Update $a $b's information";
-$this->params['breadcrumbs'][] = ['label' => "$a $b", 'url' => '/persons/web?r=site/person&id=' . $person->id];
+$this->params['breadcrumbs'][] = ['label' => "$a $b", 'url' => '/persons/web/person/' . $person->id];
 $this->params['breadcrumbs'][] = ['label' => 'Update'];
 ?>
 <div class="site-update col-sm-6 no-padding">

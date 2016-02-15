@@ -16,7 +16,7 @@ $this->title = 'Persons';
                     </div>
                 </div>
                 <div class="col-sm-2 fix">
-                    <a href="/persons/web?r=site/create">Add new record</a>
+                    <a href="/persons/web/create">Add new record</a>
                 </div>
             </div>
             <input id="sort" type="hidden" name="sort" value="<?= $sort ?>">
@@ -89,12 +89,12 @@ $this->title = 'Persons';
                 <div class="col-sm-2"><?= date('M j, Y', strtotime($person->dob)); ?></div>
                 <div class="col-sm-2"><?= $person->zip; ?></div>
                 <div class="col-sm-4">
-                    <a href="/persons/web?r=site/person&id=<?= $person->id ?>">Details</a> | <a href="/persons/web?r=site/update&id=<?= $person->id ?>">Update</a> | <a href="/persons/web?r=site/delete&id=<?= $person->id ?>">Delete</a>
+                    <a href="/persons/web/person/<?= $person->id ?>">Details</a> | <a href="/persons/web/update/<?= $person->id ?>">Update</a> | <a href="/persons/web/delete/<?= $person->id ?>">Delete</a>
                 </div>
             </div>
         <?php endforeach; ?>
     <?php else: ?>
-        No records found. <a href="/persons/web?r=site/create">Add new record</a>.
+        No records found. <a href="/persons/web/create">Add new record</a>.
     <?php endif; ?>
 </div>
 
