@@ -53,12 +53,12 @@ class SiteController extends Controller {
                         \Yii::$app->session->addFlash('danger', $message);
                     }
                 }
-                header("Location: /persons/web/add");
+                header("Location: /persons/web?r=site/create");
                 exit();
             }
 
             \Yii::$app->session->addFlash('success', 'Record added successfully.');
-            header("Location: /persons/web/person/$person->id");
+            header("Location: /persons/web?r=site/person&id=$person->id");
             exit();
         }
         return $this->render('create');
@@ -85,12 +85,12 @@ class SiteController extends Controller {
                         \Yii::$app->session->addFlash('danger', $message);
                     }
                 }
-                header("Location: /persons/web/update/$id");
+                header("Location: /persons/web?r=site/update&id=$id");
                 exit();
             }
 
             \Yii::$app->session->addFlash('success', 'Record updated successfully.');
-            header("Location: /persons/web/person/$person->id");
+            header("Location: /persons/web?r=site/person&id=$person->id");
             exit();
         }
         return $this->render('update', ['person' => $person]);
